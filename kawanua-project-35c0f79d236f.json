@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "kawanua-project",
+  "private_key_id": "35c0f79d236f43377a9b8affa6e451b64e88675e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDmBZOUOKGBPq7Z\njetgN7TkcPkJ6XRbahBILP/ZF1j1ApjC5Np5ILzB4bG7J+guMGXJn40n1Lp5uSbf\nY9Qj1MU3uFowEWrhPEnrKdF3k2R4FXuBfikkoDGQAWcV1MkFhu00ZTD9Yxqm3z50\nx5aVDF5423R1z0gNU4y2FB1Gfq8yH+kCHxW/6d9Hf3xTm5Yn4GvNlt0iSZ+zFmhk\ngBM7E7E8OVkdWQyLkf/ethqYM4KhC4L2V07lT56nVl+aSSHkz6KRXU7FnUjnOZYl\nX/fkIr1TDiwsdAwX2nV6KY+zLYy7s+vb+evMheyNNqR/7THg2o7kE1wG9dfAVnLe\nAJO48KllAgMBAAECggEAG68jd50SlcCalg/bpVqZsz4u6v97A/Q8U24puNIeNcGD\nQJRUqxbClmnN1KL/8cHcw6sn967wZpgJ0qxsKt0qg1ifxNXufCn1EjrtPVay/9+Y\nsW7NZYgWOakW5BdrvkuNSay9fFxXfSq0lKTfkxQdsVllpzbfCs45yuxEKGjfjcjz\np5tKfd2w+CNjJ98o0gQxPWqXPaCXgep2+OBcC9ZH0E1JpqKJA5cqU9OMvigQiiuM\nfiNcX9dRNaXQRGggutRkwalQn4X6IXScjmWiWMYcvsOc3rT/+jy8bc4YzGZM4o1y\nyEhjJU8erSEr0K98X2dcdKWtEh39gksN3819kq5XPQKBgQD2KbulQEXsYDQ56IoE\nsXycOwMtC9d+UkZNXF8JNEqy+EvIboLCXVTTDaRaq2hzcrSzblM3uUk3EUS5Apme\nZVg5dlroPPSlLrHVg5XIkiiveRLlg7OFjRLH6rtcPKHGURNqBlumvn+WwwCTBfIp\nMXSxnl07u1JnI+6ehGmee0zYawKBgQDvNrel56IrS6KyS6myvtowsVx7H6hp47Js\nTPe8gUi6izVTifNT0N5q9XeOQW7lFtEPi09AjqsB9ScVyh6rjLcXYVPriuwHY5+m\ne7PEKOfGh1OqM4w9IV+BgtebxT95JOl9Psp7cFXaJaefMZVvTY1xecmsdPPd03x/\nlIoBuw05bwKBgQCgog8PAOggHY83EqWt9lwIXwHtjUKr7ehuZw6lJPhx3VEmk+bE\nCr9lkgtkF2Jro7iDNkUboc9DHgOobyfrktqFdNRRpCVI/TWSzPEbFzVxfCJ2nwCw\n76QHzQdCY1Z14UY387ovDzSXHtzrFAA4HUu29E6GwfA92dbGnkWF45P7zQKBgADO\ngW4Iyu40chcB1E+q/xdc8b/kim/Y+bgNxmQXV4RxhbuDYpOsx6M6sq2DIPmayxev\nU5QXJxJ5nikfplzTu6ZTiLHppQQdXON11VRbAvUTbb/MLrPiEe1g4JNA5gbljfgD\nJzGlXlS+/cK2qxdV/p0cWQbA2jWsSeYwPQrmc5P3AoGAdH4dJ480lARsCN9CMwAW\ngAoeJQKv+nx7ACvP9dqsuZUd5oWPG7R+o7Dx0E/cn5IlDu3EcpsD+N/aPnzKxr2z\n7aLfjiPWeYCOLKu3QX6xGiUH/av7ss6e8SsbVGYQ2kg2rwzBfd+BC2iyKCnBNfqk\nlhzoyvYiITGqohY8ALVqQeY=\n-----END PRIVATE KEY-----\n",
+  "client_email": "kawanua-projectt@kawanua-project.iam.gserviceaccount.com",
+  "client_id": "108294957642557673159",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/kawanua-projectt%40kawanua-project.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
