@@ -1,10 +1,10 @@
 import  Express  from "express";
-const uploadRoute = Express.Router();
-import {upload,createUpload} from "../controller/upload.js"
-
-
+const Uploadrouter = Express.Router();
+import {createUpload} from "../controller/upload.js"
+import { verifyToken } from "../middleware/Verify_Token.js";
+import upload from '../Utils/multer.js'
 
 // Middleware untuk menangani request POST /stories
-uploadRoute.post('/upload', upload.single('photo'), createUpload);
+Uploadrouter.post('/upload', verifyToken,upload.single('image'), createUpload);
 
-export default uploadRoute;
+export default Uploadrouter;

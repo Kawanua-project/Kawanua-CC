@@ -3,9 +3,9 @@ import jwt from "jsonwebtoken";
 export const verifyToken = (req, res, next) => {
     const authHeader = req.headers['authorization'];
     const token = authHeader &&  authHeader.split(' ')[1];
-    if(token==null) return res.sendstatus(401);
+    if(token==null) return res.status(401);
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET,(err, decoded)=>{
-        if(err) return res.sendstatus(403);
+        if(err) return res.status(403);
         req.email = decoded.email;
         next()
     })
