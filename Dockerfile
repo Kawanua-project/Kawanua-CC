@@ -16,6 +16,5 @@ COPY . .
 
 # Make port 3000 available to the world outside this container
 EXPOSE 4000
-
 # Run the application
 CMD ["npm", "start"]
