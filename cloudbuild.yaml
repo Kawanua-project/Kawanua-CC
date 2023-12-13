@@ -19,7 +19,7 @@ steps:
       - '--cpu=1'
       - '--memory=1024Mi'
       - '--allow-unauthenticated'
-      - '--set-secrets=db_name=db_name:latest,db_user=db_user:latest,,db_password=,db_password:latest,db_host=db_host:latest,db_dialect=db_dialect:latest,access_token_secret=access_token_secret:latest,refresh_token_secret=refresh_token_secret '
+      - '--set-secrets=DB_NAME=DB_NAME:latest,DB_USER=DB_USER:latest,DB_PASSWORD=DB_PASSWORD:latest,DB_HOST=DB_HOST:latest,DB_DIALECT=DB_DIALECT:latest,ACCESS_TOKEN_SECRET=ACCESS_TOKEN_SECRET:latest,REFRESH_TOKEN_SECRET=REFRESH_TOKEN_SECRET '
 images:
   - 'gcr.io/$PROJECT_ID/kawanua:$COMMIT_SHA'
 logsBucket: 'gs://kawanua/logs'
