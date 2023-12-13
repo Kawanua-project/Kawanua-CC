@@ -2,9 +2,8 @@ import Express from "express";
 import dotenv from "dotenv";
 import cors from "cors"; // Import cors module
 import db from "./config/Database.js";
-import Uploadrouter from "./routes/uploadRoute.js";
 import router from "./routes/userRoute.js";
-const PORT =5000;
+const PORT =4000;
 const app = Express();
 dotenv.config();
 
@@ -18,7 +17,6 @@ console.error(error)
 app.use(cors());
 app.use(Express.json());
 app.use(router);
-app.use(Uploadrouter)
 
 app.use((req, res, next) => {
   req.refresh_token = req.body.refreshToken; // Adjust based on how you send the refresh token

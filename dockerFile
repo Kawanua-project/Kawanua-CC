@@ -1,0 +1,36 @@
+# Dockerfile
+# Use an official Node.js runtime as a parent image
+FROM node:18-bullseye-slim
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
+
+# Install the project dependencies
+RUN npm install
+
+# Copy the content of the local src directory to the working directory
+COPY . .
+
+# Make port 3000 available to the world outside this container
+EXPOSE 4000
+
+ENV ACCESS_TOKEN_SECRET=ldy82yey72e2e72ye7egegeegg2g2s22s2e2e2e2beb2eb2be2be4j49fj4fMF
+ENV REFRESH_TOKEN_SECRET=j3kj5k34j5kj43k436j34jk6jk356j5kjk757k5jkj7kj5j3n7n44kf4jf49jF
+
+ENV DB_NAME=dbkawanua
+ENV DB_USER=agung
+ENV DB_PASSWORD=agung12345
+ENV DB_HOST=34.101.122.144
+ENV DB_DIALECT=mysql
+
+
+
+
+# ENV Here
+
+
+# Run the application
+CMD ["npm", "start"]
