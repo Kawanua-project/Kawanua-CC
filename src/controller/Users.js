@@ -1,7 +1,6 @@
 import Users from "../models/userModels.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { nanoid } from "nanoid";
 
 export const getUsers = async(req,res)=>{
     try {
@@ -18,8 +17,7 @@ export const getUsers = async(req,res)=>{
 
 export const Register  = async(req,res)=>{
     const { name, email, password,confpassword }=req.body;
-    const userId = nanoid(16)
-    
+  
     if (password.length !== 8) {
         return res.status(400).json({ msg: 'Password harus memiliki panjang 8 karakter' });
       }
@@ -32,12 +30,16 @@ export const Register  = async(req,res)=>{
      const existingUser = await Users.findOne({ where: { email } });
       if (existingUser) {
       return res.status(400).json({ msg: 'Email sudah terdaftar. Gunakan email lain.' });
+
     }
+
         await Users.create({
-        id : userId,
         name : name,
         email : email,
         password : hashPassword,
+
+      
+
 
         });
         res.json({msg:'Register Berhasil'});
@@ -48,6 +50,7 @@ export const Register  = async(req,res)=>{
     }
 
 };
+
 
 export const Login = async(req,res)=>{
   try {
