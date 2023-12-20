@@ -14,40 +14,37 @@ export const getUsers = async(req,res)=>{
     }
 }
 
-export const Register  = async(req,res)=>{
-    const { name, email, password,confpassword }=req.body;
-  
-    if (password.length < 8) {
+export const Register = async (req, res) => {
+  const { name, email, password, confpassword } = req.body;
+
+  if (password.length < 8) {
       return res.status(400).json({ msg: 'Password harus memiliki panjang minimal 8 karakter' });
   }
-    if(password !== confpassword) return res.status(400).json({msg:'Password dan Confirm Password tidak cocok'});
 
-    const salt = await bcrypt.genSalt();
-    const hashPassword = await bcrypt.hash(password,salt);
+  if (password !== confpassword) {
+      return res.status(400).json({ msg: 'Password dan Confirm Password tidak cocok' });
+  }
 
-    try {
-     const existingUser = await Users.findOne({ where: { email } });
+  try {
+      const existingUser = await Users.findOne({ where: { email } });
       if (existingUser) {
-      return res.status(400).json({ msg: 'Email sudah terdaftar. Gunakan email lain.' });
+          return res.status(400).json({ msg: 'Email sudah terdaftar. Gunakan email lain.' });
+      }
 
-    }
+      const salt = await bcrypt.genSalt();
+      const hashPassword = await bcrypt.hash(password, salt);
 
-        await Users.create({
-        name : name,
-        email : email,
-        password : hashPassword,
+      await Users.create({
+          name: name,
+          email: email,
+          password: hashPassword,
+      });
 
-      
-
-
-        });
-        res.json({msg:'Register Berhasil'});
-    } catch (error) {
-        console.log(error)
-        res.status(500).json({ msg: 'Terjadi kesalahan saat mendaftar' });
-
-    }
-
+      res.json({ msg: 'Register Berhasil' });
+  } catch (error) {
+      console.error(error);
+      res.status(500).json({ msg: 'Terjadi kesalahan saat mendaftar' });
+  }
 };
 
 
@@ -74,7 +71,7 @@ export const Login = async(req,res)=>{
 
       // Menambahkan claim "sub" dengan nilai ID pengguna
       const accessToken = jwt.sign({sub: userId, name, email}, process.env.ACCESS_TOKEN_SECRET, {
-          expiresIn: '60m',
+          expiresIn: '720h',
       });
 
       const refreshToken = jwt.sign({sub: userId, name, email}, process.env.REFRESH_TOKEN_SECRET, {
